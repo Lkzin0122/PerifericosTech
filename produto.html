@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Produto não encontrado">
+  <title>Produto | Periféricos Tech</title>
+  
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Periféricos Tech - Home">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="currentColor"/>
+          <path d="M8 12h16M8 16h12M8 20h8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">Periféricos <span class="logo-accent">Tech</span></span>
+      </a>
+
+      <div class="search-wrapper" role="search">
+        <label for="search-input" class="visually-hidden">Buscar produtos</label>
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="search" id="search-input" class="search-input" placeholder="Buscar mouses, teclados, headsets..." autocomplete="off" aria-label="Buscar produtos">
+        <div class="search-results" id="search-results" aria-live="polite"></div>
+      </div>
+
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Minha conta" data-tooltip="Minha conta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
+        <button class="icon-btn" aria-label="Lista de desejos" data-tooltip="Favoritos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span class="badge-count" id="wishlist-count">0</span></button>
+        <button class="icon-btn cart-btn" aria-label="Carrinho de compras" id="cart-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="badge-count" id="cart-count">0</span></button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"><span class="hamburger" aria-hidden="true"></span></button>
+      </div>
+    </div>
+
+    <nav class="nav-desktop" aria-label="Navegação principal">
+      <div class="container">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown"><button class="nav-link dropdown-trigger" aria-haspopup="true" aria-expanded="false">Categorias</button><div class="dropdown-menu" role="menu"><div class="dropdown-grid"><div class="dropdown-category"><h4>Mouses</h4><ul role="none"><li><a href="categoria.html?cat=mouses" role="menuitem">Todos os Mouses</a></li><li><a href="categoria.html?cat=mouses&type=gamer" role="menuitem">Gamer</a></li><li><a href="categoria.html?cat=mouses&type=office" role="menuitem">Escritório/Produtividade</a></li><li><a href="categoria.html?cat=mouses&type=ergonomic" role="menuitem">Ergonômicos/Verticais</a></li><li><a href="categoria.html?cat=mouses&type=wireless" role="menuitem">Sem Fio</a></li></ul></div><div class="dropdown-category"><h4>Teclados</h4><ul role="none"><li><a href="categoria.html?cat=teclados" role="menuitem">Todos os Teclados</a></li><li><a href="categoria.html?cat=teclados&type=mechanical" role="menuitem">Mecânicos</a></li><li><a href="categoria.html?cat=teclados&type=low-profile" role="menuitem">Low Profile</a></li><li><a href="categoria.html?cat=teclados&type=compact" role="menuitem">Compactos (60%/75%)</a></li><li><a href="categoria.html?cat=teclados&type=wireless" role="menuitem">Sem Fio</a></li></ul></div><div class="dropdown-category"><h4>Headsets & Áudio</h4><ul role="none"><li><a href="categoria.html?cat=headsets" role="menuitem">Todos Headsets</a></li><li><a href="categoria.html?cat=headsets&type=gamer" role="menuitem">Gamer</a></li><li><a href="categoria.html?cat=headsets&type=anc" role="menuitem">Cancelamento Ruído (ANC)</a></li><li><a href="categoria.html?cat=headsets&type=wireless" role="menuitem">Sem Fio</a></li></ul></div><div class="dropdown-category"><h4>Monitores</h4><ul role="none"><li><a href="categoria.html?cat=monitores" role="menuitem">Todos Monitores</a></li><li><a href="categoria.html?cat=monitores&type=gamer" role="menuitem">Gamer (144Hz+)</a></li><li><a href="categoria.html?cat=monitores&type=ultrawide" role="menuitem">UltraWide</a></li><li><a href="categoria.html?cat=monitores&type=4k" role="menuitem">4K/UHD</a></li><li><a href="categoria.html?cat=monitores&type=oled" role="menuitem">OLED</a></li></ul></div><div class="dropdown-category"><h4>Acessórios</h4><ul role="none"><li><a href="categoria.html?cat=acessorios" role="menuitem">Todos Acessórios</a></li><li><a href="categoria.html?cat=acessorios&type=mousepad" role="menuitem">Mousepads</a></li><li><a href="categoria.html?cat=acessorios&type=monitor-arm" role="menuitem">Suportes/Braços</a></li><li><a href="categoria.html?cat=acessorios&type=webcam" role="menuitem">Webcams</a></li><li><a href="categoria.html?cat=acessorios&type=keypad" role="menuitem">Teclados Numéricos</a></li></ul></div><div class="dropdown-brands"><h4>Marcas</h4><ul role="none" class="brands-list"><li><a href="marca.html?brand=Logitech" role="menuitem">Logitech</a></li><li><a href="marca.html?brand=Razer" role="menuitem">Razer</a></li><li><a href="marca.html?brand=Corsair" role="menuitem">Corsair</a></li><li><a href="marca.html?brand=Keychron" role="menuitem">Keychron</a></li><li><a href="marca.html?brand=Sony" role="menuitem">Sony</a></li><li><a href="marca.html?brand=LG" role="menuitem">LG</a></li><li><a href="marca.html?brand=Samsung" role="menuitem">Samsung</a></li><li><a href="marca.html?brand=Ergotron" role="menuitem">Ergotron</a></li></ul></div></div></div></li>
+          <li class="nav-item"><a href="destaques.html" class="nav-link">Destaques</a></li>
+          <li class="nav-item"><a href="lancamentos.html" class="nav-link">Lançamentos</a></li>
+          <li class="nav-item"><a href="ofertas.html" class="nav-link">Ofertas</a></li>
+          <li class="nav-item"><a href="comparar.html" class="nav-link">Comparar</a></li>
+          <li class="nav-item"><a href="suporte.html" class="nav-link">Suporte</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="top-banner" role="status" aria-live="polite">
+      <div class="container top-banner-content">
+        <div class="banner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span>Frete grátis acima de R$ 299,90</span></div>
+        <div class="banner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12V7H5v5"/><path d="M16 7l-4 4-4-4"/><path d="M12 17v5"/></svg><span>Parcelamento em até 12x sem juros</span></div>
+        <div class="banner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Compra segura e criptografada</span></div>
+        <div class="banner-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12V7H5v5"/><path d="M16 7l-4 4-4-4"/><path d="M12 17v5"/></svg><span>Troca fácil em até 30 dias</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile" role="navigation">
+    <div class="mobile-menu-header"><h2>Menu</h2><button class="mobile-menu-close" id="mobile-menu-close" aria-label="Fechar menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <ul class="mobile-nav-list"><li class="mobile-nav-item"><button class="mobile-nav-link mobile-dropdown-trigger" aria-expanded="false">Categorias</button><ul class="mobile-dropdown" aria-hidden="true"><li><a href="categoria.html?cat=mouses">Mouses</a></li><li><a href="categoria.html?cat=teclados">Teclados</a></li><li><a href="categoria.html?cat=headsets">Headsets</a></li><li><a href="categoria.html?cat=monitores">Monitores</a></li><li><a href="categoria.html?cat=acessorios">Acessórios</a></li></ul></li><li><a href="destaques.html" class="mobile-nav-link">Destaques</a></li><li><a href="lancamentos.html" class="mobile-nav-link">Lançamentos</a></li><li><a href="ofertas.html" class="mobile-nav-link">Ofertas</a></li><li><a href="comparar.html" class="mobile-nav-link">Comparar</a></li><li><a href="suporte.html" class="mobile-nav-link">Suporte</a></li><li class="mobile-divider"></li><li><a href="conta.html" class="mobile-nav-link">Minha Conta</a></li><li><a href="carrinho.html" class="mobile-nav-link">Carrinho</a></li><li><a href="favoritos.html" class="mobile-nav-link">Favoritos</a></li></ul>
+  </nav>
+
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <aside class="cart-sidebar" id="cart-sidebar" aria-label="Carrinho de compras" role="dialog" aria-modal="true">
+    <div class="cart-header"><h2>Carrinho de Compras</h2><button class="cart-close" id="cart-close" aria-label="Fechar carrinho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="cart-content" id="cart-content"></div>
+    <div class="cart-footer" id="cart-footer"></div>
+  </aside>
+
+  <main id="main-content" role="main">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Navegação estrutural" style="padding: var(--space-4) 0; background: var(--color-gray-50); border-bottom: 1px solid var(--color-gray-200);">
+      <div class="container">
+        <ol style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); font-size: var(--font-size-sm); color: var(--color-gray-500);" id="breadcrumb">
+          <!-- Inserido via JS -->
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-detail" style="padding: var(--space-8) 0;">
+      <div class="container">
+        <div class="product-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10);">
+          <!-- Gallery -->
+          <div class="product-gallery" id="product-gallery">
+            <!-- Inserido via JS -->
+          </div>
+
+          <!-- Info -->
+          <div class="product-info-detail" id="product-info-detail">
+            <!-- Inserido via JS -->
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="product-tabs" style="margin-top: var(--space-12);">
+          <div class="tabs-nav" role="tablist" style="display: flex; border-bottom: 1px solid var(--color-gray-200); margin-bottom: var(--space-6);">
+            <button role="tab" aria-selected="true" aria-controls="tab-description" id="tab-btn-description" class="tab-btn active" style="padding: var(--space-4) var(--space-6); background: none; border: none; border-bottom: 2px solid var(--color-primary); color: var(--color-primary); font-weight: var(--font-weight-medium); cursor: pointer;">Descrição</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-specs" id="tab-btn-specs" class="tab-btn" style="padding: var(--space-4) var(--space-6); background: none; border: none; border-bottom: 2px solid transparent; color: var(--color-gray-500); font-weight: var(--font-weight-medium); cursor: pointer;">Especificações</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-reviews" id="tab-btn-reviews" class="tab-btn" style="padding: var(--space-4) var(--space-6); background: none; border: none; border-bottom: 2px solid transparent; color: var(--color-gray-500); font-weight: var(--font-weight-medium); cursor: pointer;">Avaliações (<span id="reviews-count">0</span>)</button>
+            <button role="tab" aria-selected="false" aria-controls="tab-shipping" id="tab-btn-shipping" class="tab-btn" style="padding: var(--space-4) var(--space-6); background: none; border: none; border-bottom: 2px solid transparent; color: var(--color-gray-500); font-weight: var(--font-weight-medium); cursor: pointer;">Entrega & Garantia</button>
+          </div>
+
+          <div class="tabs-content">
+            <div role="tabpanel" id="tab-description" aria-labelledby="tab-btn-description" class="tab-panel active" style="display: block;">
+              <div id="tab-description-content"></div>
+            </div>
+            <div role="tabpanel" id="tab-specs" aria-labelledby="tab-btn-specs" class="tab-panel" style="display: none;">
+              <div id="tab-specs-content"></div>
+            </div>
+            <div role="tabpanel" id="tab-reviews" aria-labelledby="tab-btn-reviews" class="tab-panel" style="display: none;">
+              <div id="tab-reviews-content"></div>
+            </div>
+            <div role="tabpanel" id="tab-shipping" aria-labelledby="tab-btn-shipping" class="tab-panel" style="display: none;">
+              <div id="tab-shipping-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <section class="related-products" style="margin-top: var(--space-16);">
+          <header class="section-header"><h2>Produtos Relacionados</h2><p>Você também pode gostar</p></header>
+          <div class="products-grid" id="related-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5);"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-bottom" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-4); padding: var(--space-8) 0; border-top: 1px solid var(--color-gray-800);">
+        <div class="footer-legal"><p>&copy; 2024 Periféricos Tech. Todos os direitos reservados.</p></div>
+        <div class="footer-payments"><span class="payment-label">Formas de pagamento:</span><div class="payment-icons"><span style="font-size: var(--font-size-xs); color: var(--color-gray-500);">Visa, Mastercard, Elo, Pix, Boleto</span></div></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-label="Notificações"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
